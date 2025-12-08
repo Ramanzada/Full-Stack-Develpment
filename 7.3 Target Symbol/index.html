@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Target Project</title>
+    <style>
+      /* WRITE ALL YOUR CSS BELOW */
+      .target {
+        width: 600px;
+        height: 600px;
+        background-color: red;
+        position: relative;
+        border-radius: 50%;
+      }
+
+      /* Middle ring */
+      .target > div {
+        width: 400px;
+        height: 400px;
+        background-color: white;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Inner bullseye */
+      .target > div > div {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Global text */
+      p {
+        font-size: 3rem;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Make only CENTER black */
+      .target > div div p {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="target">
+      <p>TOP TEXT</p>
+      <div>
+        <div>
+          <p>CENTER</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
