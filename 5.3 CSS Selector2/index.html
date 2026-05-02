@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Selectors — Practice 2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>CSS Selectors — Round 2</h1>
+    <h2>Combinators, Pseudo-classes & Pseudo-elements</h2>
+
+    <!-- TODO 1: Make every <a> inside <nav> have "color: orange".
+         Use a descendant selector. -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <!-- TODO 2: Make only the <p> tags that are DIRECT children of <article>
+         have "font-weight: bold". The nested <p> inside <blockquote>
+         should NOT be bold. Use the child combinator (>). -->
+    <article>
+      <p>This paragraph is a direct child of article.</p>
+      <p>This one too.</p>
+      <blockquote>
+        <p>This paragraph is nested inside a blockquote — leave it alone.</p>
+      </blockquote>
+    </article>
+
+    <!-- TODO 3: Make every <a> turn "color: red" when the user hovers over it.
+         Use the :hover pseudo-class. -->
+    <p>Hover over <a href="#">this link</a> to test it.</p>
+
+    <!-- TODO 4: Style the FIRST <li> in this list with "color: green",
+         and the LAST <li> with "color: purple".
+         Use :first-child and :last-child. -->
+    <ul>
+      <li id="li-green">First item</li>
+      <li>Middle item</li>
+      <li>Another middle item</li>
+      <li>Last item</li>
+    </ul>
+
+    <!-- TODO 5: Style every EVEN row of this list with "background-color: lightgray".
+         Use :nth-child(even). -->
+    <ol>
+      <li>Row one</li>
+      <li>Row two</li>
+      <li>Row three</li>
+      <li>Row four</li>
+      <li>Row five</li>
+      <li>Row six</li>
+    </ol>
+
+    <!-- TODO 6: Make the FIRST LETTER of this paragraph "font-size: 32px"
+         and "color: darkblue". Use the ::first-letter pseudo-element. -->
+    <p class="intro">
+      Pseudo-elements let you style specific parts of an element without adding
+      extra HTML. They are powerful and underused.
+    </p>
+
+    <!-- TODO 7: Group selectors. Make all <h1>, <h2>, and <h3> tags share
+         "font-family: Georgia, serif" in a SINGLE rule.
+         Use the grouping selector (comma). -->
+    <h3>This heading should also be in Georgia.</h3>
+
+    <!-- TODO 8: Bonus — select <input> elements that are specifically
+         type="email" and give them a "border: 2px solid teal".
+         Combine an element selector with an attribute selector. -->
+    <form>
+      <input type="text" placeholder="Your name" />
+      <input type="email" placeholder="Your email" />
+      <input type="password" placeholder="Password" />
+    </form>
+  </body>
+</html>

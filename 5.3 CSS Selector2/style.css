@@ -1,0 +1,16 @@
+nav a {
+    color: orange;
+}
+article > p {
+    font-weight: bold;
+}
+
+a:hover {
+    color: red;
+}
+#li-green {
+    color: green;
+}
+ol li:nth-child(even) {
+    background-color: lightgrey;
+}
