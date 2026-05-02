@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psudo elements</title>
+    <style>
+      h1::first-letter {
+        font-size: 2em;
+        font-style: italic;
+      }
+      p::first-line {
+        background-color: yellow;
+      }
+      *::selection {
+        color: white;
+        background-color: red;
+      }
+      #fruit li::before {
+        content: "✅";
+      }
+      #apple::after {
+        content: "🍎";
+      }
+      #orange::after {
+        content: "🟠";
+      }
+      #banana::after {
+        content: "🍌";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello Wolrd!</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+      recusandae reiciendis sapiente sint, ratione ipsum asperiores modi
+      dignissimos distinctio reprehenderit nesciunt placeat quibusdam facilis!
+      Sint necessitatibus rem atque ipsa voluptatum.
+    </p>
+    <ul id="fruit">
+      <li id="apple">Apple</li>
+      <li id="orange">Orange</li>
+      <li id="banana">Banana</li>
+    </ul>
+  </body>
+</html>
